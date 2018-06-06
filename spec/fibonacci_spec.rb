@@ -38,13 +38,4 @@ describe Fibonacci do
     expect(@fib.sum).to eq 257114
   end
 
-
-
-
-
-
-
-
-
-
 end
