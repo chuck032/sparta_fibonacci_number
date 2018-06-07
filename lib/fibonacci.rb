@@ -30,10 +30,10 @@ class Fibonacci
   end
 
 # Creates a fibonacci sequence that is less than 4,000,000
-  def less_4_mill
+  def less_4_mill(num)
     i = 0
     loop do
-      if @fibonacci_array[i+1] > 400000
+      if @fibonacci_array[i+1] > num
         # removes last term of sequence
         @fibonacci_array = @fibonacci_array[0..-2]
       else

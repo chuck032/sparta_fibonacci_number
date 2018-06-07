@@ -17,7 +17,6 @@ describe Fibonacci do
     expect(@fib.even[0]).to eq 2
     expect(@fib.even.last).to eq 34
     expect(@fib.even.count).to eq 3
-    expect(@fib.even).not_to include(1,3,5,7,9)
   end
 
   it 'should sum even terms of first 10 fibonacci numbers' do
@@ -27,15 +26,15 @@ describe Fibonacci do
   end
 
   it 'should be a fibonacci sequence that does not exceed 4,000,000' do
-    @fib.less_4_mill
+    @fib.less_4_mill(4000000)
     expect(@fib.fibonacci_array[2]).to eq 3
-    expect(@fib.fibonacci_array.last).to eq 317811
+    expect(@fib.fibonacci_array.last).to eq 3524578
   end
 
   it 'should sum the even terms of fibonacci sequence that does not exceed 4,000,000' do
-    @fib.less_4_mill
+    @fib.less_4_mill(4000000)
     @fib.even
-    expect(@fib.sum).to eq 257114
+    expect(@fib.sum).to eq 4613732
   end
 
 end
